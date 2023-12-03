@@ -4,16 +4,16 @@
 
 ### Rolling/Edge/Unstable
 
-You can install `Websurfx` through the [Aur](https://aur.archlinux.org/packages/websurfx-git), By running the following command (using [paru](https://github.com/Morganamilo/paru)):
+You can install `Websurfx` through the [Aur](https://aur.archlinux.org/packages/anvesh-git), By running the following command (using [paru](https://github.com/Morganamilo/paru)):
 
 ```shell
-paru -S websurfx-edge-git
+paru -S anvesh-edge-git
 ```
 
-After installing it you can run the websurfx server by running the following commands:
+After installing it you can run the anvesh server by running the following commands:
 
 ```shell
-websurfx
+anvesh
 ```
 
 Once you have started the server, open your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Websurfx.
@@ -22,26 +22,26 @@ If you want to change the port or the IP or any other configuration setting chec
 
 ### Stable
 
-For the stable version, follow the same steps as above (as mentioned for the `unstable/rolling/edge` version) with the only difference being that the package to be installed for the stable version is called `websurfx-git` instead of `websurfx-edge-git`.
+For the stable version, follow the same steps as above (as mentioned for the `unstable/rolling/edge` version) with the only difference being that the package to be installed for the stable version is called `anvesh-git` instead of `anvesh-edge-git`.
 
 ## NixOS
 
-A `flake.nix` has been provided to allow installing `websurfx` easily. It utilizes [nearsk](https://github.com/nix-community/naersk) to automatically generate a derivation based on `Cargo.toml` and `Cargo.lock`.
+A `flake.nix` has been provided to allow installing `anvesh` easily. It utilizes [nearsk](https://github.com/nix-community/naersk) to automatically generate a derivation based on `Cargo.toml` and `Cargo.lock`.
 
 The Websurfx project provides 2 versions/flavours for the flake `stable` and `rolling/unstable/edge`. The steps for each are covered below in different sections.
 
 ### Rolling/Edge/Unstable
 
-To get started, First, clone the repository, edit the config file which is located in the `websurfx` directory, and then build and run the websurfx server by running the following commands:
+To get started, First, clone the repository, edit the config file which is located in the `anvesh` directory, and then build and run the anvesh server by running the following commands:
 
 ```shell
-git clone https://github.com/neon-mmd/websurfx.git
-cd websurfx
-cp -rf ./websurfx/ ~/.config/
-$ mkdir /opt/websurfx/
-$ cp -rf ./public/ /opt/websurfx/
-nix build .#websurfx
-nix run .#websurfx
+git clone https://github.com/neon-mmd/anvesh.git
+cd anvesh
+cp -rf ./anvesh/ ~/.config/
+$ mkdir /opt/anvesh/
+$ cp -rf ./public/ /opt/anvesh/
+nix build .#anvesh
+nix run .#anvesh
 ```
 
 > **Note**
@@ -58,7 +58,7 @@ If you want to change the port or the IP or any other configuration setting chec
 >   description = "My awesome configuration";
 >
 >   inputs = {
->     websurfx.url = "github:neon-mmd/websurfx";
+>     anvesh.url = "github:neon-mmd/anvesh";
 >   };
 >
 >   outputs = { nixpkgs, ... }@inputs: {
@@ -66,7 +66,7 @@ If you want to change the port or the IP or any other configuration setting chec
 >       hostname = nixpkgs.lib.nixosSystem {
 >         system = "x86_64-linux";
 >         modules = [{
->           environment.systemPackages = [inputs.websurfx.packages.x86_64-linux.websurfx];
+>           environment.systemPackages = [inputs.anvesh.packages.x86_64-linux.anvesh];
 >         }];
 >       };
 >     };
@@ -79,14 +79,14 @@ If you want to change the port or the IP or any other configuration setting chec
 For the stable version, follow the same steps as above (as mentioned for the `unstable/rolling/edge version`) with an addition of one command which has to be performed after cloning and changing the directory into the repository which makes the building step as follows:
 
 ```shell
-git clone https://github.com/neon-mmd/websurfx.git
-cd websurfx
+git clone https://github.com/neon-mmd/anvesh.git
+cd anvesh
 git checkout stable
-cp -rf ./websurfx/ ~/.config/
-$ mkdir /opt/websurfx/
-$ cp -rf ./public/ /opt/websurfx/
-nix build .#websurfx
-nix run .#websurfx
+cp -rf ./anvesh/ ~/.config/
+$ mkdir /opt/anvesh/
+$ cp -rf ./public/ /opt/anvesh/
+nix build .#anvesh
+nix run .#anvesh
 ```
 
 > **Note**
@@ -98,19 +98,19 @@ The package is currently not available on other Linux distros. With contribution
 
 # Install From Source
 
-Before you can start building `websurfx`, you will need to have `Cargo` installed on your system. You can find the installation instructions [here](https://doc.rust-lang.org/cargo/getting-started/installation.html).
+Before you can start building `anvesh`, you will need to have `Cargo` installed on your system. You can find the installation instructions [here](https://doc.rust-lang.org/cargo/getting-started/installation.html).
 
 ## Stable
 
-To get started with Websurfx, clone the repository, edit the config file which is located in the `websurfx` directory, and install redis server by following the instructions located [here](https://redis.io/docs/getting-started/) and then build and run the websurfx server by running the following commands:
+To get started with Websurfx, clone the repository, edit the config file which is located in the `anvesh` directory, and install redis server by following the instructions located [here](https://redis.io/docs/getting-started/) and then build and run the anvesh server by running the following commands:
 
 ```shell
-git clone https://github.com/neon-mmd/websurfx.git
-cd websurfx
+git clone https://github.com/neon-mmd/anvesh.git
+cd anvesh
 git checkout stable
 cargo build -r
 redis-server --port 8082 &
-./target/release/websurfx
+./target/release/anvesh
 ```
 
 Once you have started the server, open your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Websurfx.
@@ -122,11 +122,11 @@ If you want to change the port or the IP or any other configuration setting chec
 If you want to use the rolling/edge branch, run the following commands instead:
 
 ```shell
-git clone https://github.com/neon-mmd/websurfx.git
-cd websurfx
+git clone https://github.com/neon-mmd/anvesh.git
+cd anvesh
 ```
 
-Once you have changed the directory to the `websurfx` directory then follow the build options listed below:
+Once you have changed the directory to the `anvesh` directory then follow the build options listed below:
 
 ### Hybrid Cache
 
@@ -177,7 +177,7 @@ cargo build -r --no-default-features --features redis-cache
 Once you have finished building the `search engine`. then run the following command to start the search engine:
 
 ```shell
-./target/release/websurfx
+./target/release/anvesh
 ```
 
 Once you have started the server, launch your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Websurfx.
@@ -198,13 +198,13 @@ version: '3.9'
 services:
   app:
     # Comment the line below if you don't want to use the `hybrid/latest` image.
-    image: neonmmd/websurfx:latest
+    image: neonmmd/anvesh:latest
     # Uncomment the line below if you want to use the `no cache` image.
-    # image: neonmmd/websurfx:nocache
+    # image: neonmmd/anvesh:nocache
     # Uncomment the line below if you want to use the `memory` image.
-    # image: neonmmd/websurfx:memory
+    # image: neonmmd/anvesh:memory
     # Uncomment the line below if you want to use the `redis` image.
-    # image: neonmmd/websurfx:redis
+    # image: neonmmd/anvesh:redis
     ports:
       - 8080:8080
     # Uncomment the following lines if you are using the `hybrid/latest` or `redis` image.
@@ -213,13 +213,13 @@ services:
     # links:
     #   - redis
     volumes:
-      - ./websurfx/:/etc/xdg/websurfx/
+      - ./anvesh/:/etc/xdg/anvesh/
   # Uncomment the following lines if you are using the `hybrid/latest` or `redis` image.
   # redis:
   #   image: redis:latest
 ```
 
-Then make sure to edit the `docker-compose.yml` file as required. After that create a directory `websurfx` in the directory you have placed the `docker-compose.yml` file, and then in the new directory create two new empty files named `allowlist.txt` and `blocklist.txt`. Finally, create a new config file `config.lua` with the default configuration, which looks something like this:
+Then make sure to edit the `docker-compose.yml` file as required. After that create a directory `anvesh` in the directory you have placed the `docker-compose.yml` file, and then in the new directory create two new empty files named `allowlist.txt` and `blocklist.txt`. Finally, create a new config file `config.lua` with the default configuration, which looks something like this:
 
 ```lua
 -- ### General ###
@@ -308,11 +308,11 @@ This section covers how to deploy the app with docker manually by manually build
 First, clone the repository by running the following command:
 
 ```bash
-git clone https://github.com/neon-mmd/websurfx.git
-cd websurfx
+git clone https://github.com/neon-mmd/anvesh.git
+cd anvesh
 ```
 
-After that edit the config.lua file located under `websurfx` directory. In the config file, you will specifically need to change to values which are `binding_ip_addr` and `redis_connection_url` which should make the config look something like this:
+After that edit the config.lua file located under `anvesh` directory. In the config file, you will specifically need to change to values which are `binding_ip_addr` and `redis_connection_url` which should make the config look something like this:
 
 ```lua
 -- ### General ###
@@ -388,8 +388,8 @@ This will take around 5-10 mins for the first deployment, afterwards, the docker
 For the stable version, follow the same steps as above (as mentioned for the unstable/rolling/edge version) with an addition of one command which has to be performed after cloning and changing the directory into the repository which makes the cloning step as follows:
 
 ```bash
-git clone https://github.com/neon-mmd/websurfx.git
-cd websurfx
+git clone https://github.com/neon-mmd/anvesh.git
+cd anvesh
 git checkout stable
 ```
 

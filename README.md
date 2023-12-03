@@ -1,12 +1,12 @@
 ﻿<h1 align="center">
-  <img src="./images/websurfx_logo.png" alt="websurfx logo" align="center" />
+  <img src="./images/anvesh_logo.png" alt="anvesh logo" align="center" />
 </h1>
 <p align="center">
   <b align="center"><a href="README.md">Readme</a></b> |
   <b><a href="https://discord.gg/SWnda7Mw5u">Discord</a></b> |
   <b><a href="docs/instances.md">Instances</a></b> |
   <b><a href="https://discord.gg/VKCAememnr">User Showcase</a></b> |
-  <b><a href="https://github.com/neon-mmd/websurfx">GitHub</a></b> |
+  <b><a href="https://github.com/neon-mmd/anvesh">GitHub</a></b> |
   <b><a href="docs">Documentation</a></b>
   <br /><br />
    <a
@@ -20,13 +20,13 @@
   <a href="#">
     <img
       alt="GitHub code size in bytes"
-      src="https://img.shields.io/github/languages/code-size/neon-mmd/websurfx?style=flat-square"
+      src="https://img.shields.io/github/languages/code-size/neon-mmd/anvesh?style=flat-square"
     />
   </a>
-  <a href="https://github.com/neon-mmd/websurfx/actions">
+  <a href="https://github.com/neon-mmd/anvesh/actions">
     <img
       alt="GitHub Workflow Status"
-      src="https://img.shields.io/github/actions/workflow/status/neon-mmd/websurfx/rust.yml?style=flat-square"
+      src="https://img.shields.io/github/actions/workflow/status/neon-mmd/anvesh/rust.yml?style=flat-square"
     />
   </a>
   <a href=""
@@ -35,13 +35,13 @@
       src="https://img.shields.io/maintenance/yes/2023?style=flat-square"
     />
   </a>
-  <a href="https://www.codefactor.io/repository/github/neon-mmd/websurfx">
+  <a href="https://www.codefactor.io/repository/github/neon-mmd/anvesh">
     <img
       alt="CodeFactor"
-      src="https://www.codefactor.io/repository/github/neon-mmd/websurfx/badge"
+      src="https://www.codefactor.io/repository/github/neon-mmd/anvesh/badge"
     />
   </a>
-  <a href="https://gitpod.io/#https://github.com/neon-mmd/websurfx">
+  <a href="https://gitpod.io/#https://github.com/neon-mmd/anvesh">
     <img
       alt="Gitpod"
       src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod"
@@ -77,7 +77,7 @@
   - [📊 System Requirements](#system-requirements-)
   - [🗨️ FAQ (Frequently Asked Questions)](#faq-frequently-asked-questions-%EF%B8%8F)
   - [📣 More Contributors Wanted](#more-contributors-wanted-)
-  - [💖 Supporting Websurfx](#supporting-websurfx-)
+  - [💖 Supporting Websurfx](#supporting-anvesh-)
   - [📘 Documentation](#documentation-)
   - [🛣️ Roadmap](#roadmap-%EF%B8%8F)
   - [🙋 Contributing](#contributing-)
@@ -105,7 +105,7 @@
 
 # Instances 🔗
 
-> For a full list of publicly available community driven `websurfx` instances to test or for daily use. see [**Instances**](docs/instances.md)
+> For a full list of publicly available community driven `anvesh` instances to test or for daily use. see [**Instances**](docs/instances.md)
 
 **[⬆️ Back to Top](#--)**
 
@@ -126,17 +126,17 @@
 
 > For full setup instructions, see: [**Installation**](docs/installation.md)
 
-Before you can start building `websurfx`, you will need to have `Cargo` installed on your system. You can find the installation instructions [here](https://doc.rust-lang.org/cargo/getting-started/installation.html).
+Before you can start building `anvesh`, you will need to have `Cargo` installed on your system. You can find the installation instructions [here](https://doc.rust-lang.org/cargo/getting-started/installation.html).
 
-To get started with Websurfx, clone the repository, edit the config file, which is located in the `websurfx/` directory, and install the Redis server by following the instructions located [here](https://redis.io/docs/getting-started/) and then run the websurfx server and redis server using the following commands:
+To get started with Websurfx, clone the repository, edit the config file, which is located in the `anvesh/` directory, and install the Redis server by following the instructions located [here](https://redis.io/docs/getting-started/) and then run the anvesh server and redis server using the following commands:
 
 ```shell
-git clone https://github.com/neon-mmd/websurfx.git
-cd websurfx
+git clone https://github.com/neon-mmd/anvesh.git
+cd anvesh
 git checkout stable
 cargo build -r
 redis-server --port 8082 &
-./target/release/websurfx
+./target/release/anvesh
 ```
 
 Once you have started the server, open your preferred web browser and navigate to <http://127.0.0.1:8080> to start using Websurfx.
@@ -152,7 +152,7 @@ Once you have started the server, open your preferred web browser and navigate t
 
 > For full configuration instructions, see: [**Configuration**](docs/configuration.md)
 
-Websurfx is configured through the config.lua file, located at `websurfx/config.lua`.
+Websurfx is configured through the config.lua file, located at `anvesh/config.lua`.
 
 **[⬆️ Back to Top](#--)**
 
@@ -195,7 +195,7 @@ Websurfx is based on Rust due to its memory safety features, which prevent vulne
 
 # More Contributors Wanted 📣
 
-We are looking for more willing contributors to help grow this project. For more information on how you can contribute, check out the [project board](https://github.com/neon-mmd/websurfx/projects?query=is%3Aopen) and the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines and rules for making contributions.
+We are looking for more willing contributors to help grow this project. For more information on how you can contribute, check out the [project board](https://github.com/neon-mmd/anvesh/projects?query=is%3Aopen) and the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines and rules for making contributions.
 
 **[⬆️ Back to Top](#--)**
 
@@ -257,8 +257,8 @@ We would like to thank the following people for their contributions and support:
 
 <p>
   <br />
-  <a href="https://github.com/neon-mmd/websurfx/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=neon-mmd/websurfx" />
+  <a href="https://github.com/neon-mmd/anvesh/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=neon-mmd/anvesh" />
   </a>
   <br />
 </p>
@@ -266,8 +266,8 @@ We would like to thank the following people for their contributions and support:
 **Stargazers**
 
 <p>
-  <a href="https://github.com/neon-mmd/websurfx/stargazers">
-    <img src="https://reporoster.com/stars/dark/neon-mmd/websurfx" />
+  <a href="https://github.com/neon-mmd/anvesh/stargazers">
+    <img src="https://reporoster.com/stars/dark/neon-mmd/anvesh" />
   </a>
 </p>
 
@@ -276,7 +276,7 @@ We would like to thank the following people for their contributions and support:
 ---
 
 <p align="center">
-  <a href="https://github.com/neon-mmd/websurfx">
+  <a href="https://github.com/neon-mmd/anvesh">
     <img src="https://github.githubassets.com/images/icons/emoji/octocat.png" />
   </a>
   <br /><br />

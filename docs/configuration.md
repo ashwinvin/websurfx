@@ -2,14 +2,14 @@
 
 ## Installed From Source
 
-If you have built `websurfx` from the source then the configuration file will be located under the project directory (codebase) at `websurfx/`
+If you have built `anvesh` from the source then the configuration file will be located under the project directory (codebase) at `anvesh/`
 
 > **Note**
-> If you have built websurfx with an unstable/rolling/edge branch then you can copy the configuration file from `websurfx/config.lua` located under the project directory (codebase) to `~/.config/websurfx/` and make the changes there and rerun the websurfx server. _This is only available from unstable/rolling/edge version_.
+> If you have built anvesh with an unstable/rolling/edge branch then you can copy the configuration file from `anvesh/config.lua` located under the project directory (codebase) to `~/.config/anvesh/` and make the changes there and rerun the anvesh server. _This is only available from unstable/rolling/edge version_.
 
 ## Installed From Package
 
-If you have installed `websurfx` using the package manager of your Linux distro then the default configuration file will be located at `/etc/xdg/websurfx/`. You can copy the default config to `~/.config/websurfx/` make the changes there and rerun the websurfx server.
+If you have installed `anvesh` using the package manager of your Linux distro then the default configuration file will be located at `/etc/xdg/anvesh/`. You can copy the default config to `~/.config/anvesh/` make the changes there and rerun the anvesh server.
 
 Some of the configuration options provided in the file are stated below. These are subdivided into the following categories:
 

@@ -1,4 +1,4 @@
-//! A module that handles the general tab for setting page view in the `websurfx` frontend.
+//! A module that handles the general tab for setting page view in the `anvesh` frontend.
 
 use maud::{html, Markup};
 

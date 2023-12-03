@@ -1,11 +1,11 @@
 //! Main module of the application
 //!
 //! This module contains the main function which handles the logging of the application to the
-//! stdout and handles the command line arguments provided and launches the `websurfx` server.
+//! stdout and handles the command line arguments provided and launches the `anvesh` server.
 
 use mimalloc::MiMalloc;
 use std::net::TcpListener;
-use websurfx::{
+use anvesh::{
     cache::cacher::create_cache, config::parser::Config, engine::EngineHandler,
     models::client_models::HttpClient, results::aggregator::Ranker, run,
 };

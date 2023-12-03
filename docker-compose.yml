@@ -2,7 +2,7 @@
 version: "3.9"
 services:
   app:
-    image: websurfx:latest
+    image: anvesh:latest
     build: .
     ports:
       - 8080:8080
@@ -12,7 +12,7 @@ services:
     # links:
     #   - redis
     volumes:
-      - ./websurfx/:/etc/xdg/websurfx/
+      - ./anvesh/:/etc/xdg/anvesh/
   # Uncomment the following lines if you are using the `hybrid` or `redis` caching feature.
   # redis:
   #   image: redis:latest

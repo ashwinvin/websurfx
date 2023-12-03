@@ -19,7 +19,7 @@ use std::{
 };
 use tokio::join;
 
-/// Handles the route of search page of the `websurfx` meta search engine website and it takes
+/// Handles the route of search page of the `anvesh` meta search engine website and it takes
 /// two search url parameters `q` and `page` where `page` parameter is optional.
 ///
 /// # Example

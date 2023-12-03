@@ -1,4 +1,4 @@
-//! A module that handles the view for the index/home/main page in the `websurfx` frontend.
+//! A module that handles the view for the index/home/main page in the `anvesh` frontend.
 
 use maud::{html, Markup, PreEscaped};
 
@@ -18,7 +18,7 @@ pub fn index(colorscheme: &str, theme: &str) -> Markup {
     html!(
         (header(colorscheme, theme))
         main class="search-container"{
-            img src="../images/websurfx_logo.png" alt="Websurfx meta-search engine logo";
+            img src="../images/anvesh_logo.png" alt="Websurfx meta-search engine logo";
             (bar(&String::default()))
             (PreEscaped("</div>"))
         }

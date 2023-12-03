@@ -2,7 +2,7 @@
 
 ## Built-in
 
-By default `websurfx` comes with 9 colorschemes to choose from which can be easily chosen using the config file. To how to change colorschemes please view the [Configuration](https://github.com/neon-mmd/websurfx/wiki/configuration) section of the wiki.
+By default `anvesh` comes with 9 colorschemes to choose from which can be easily chosen using the config file. To how to change colorschemes please view the [Configuration](https://github.com/neon-mmd/anvesh/wiki/configuration) section of the wiki.
 
 ## Custom
 
@@ -45,7 +45,7 @@ Creating coloschemes is as easy as it gets it requires the user to have a theme 
 
 ## Built-in
 
-By default `websurfx` comes with 1 theme to choose from which can be easily chosen using the config file. To how to change themes please view the [Configuration](https://github.com/neon-mmd/websurfx/wiki/configuration) section of the wiki.
+By default `anvesh` comes with 1 theme to choose from which can be easily chosen using the config file. To how to change themes please view the [Configuration](https://github.com/neon-mmd/anvesh/wiki/configuration) section of the wiki.
 
 ## Custom
 

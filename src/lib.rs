@@ -1,5 +1,5 @@
 //! This main library module provides the functionality to provide and handle the Tcp server
-//! and register all the routes for the `websurfx` meta search engine website.
+//! and register all the routes for the `anvesh` meta search engine website.
 
 #![forbid(unsafe_code, clippy::panic)]
 #![deny(missing_docs, clippy::missing_docs_in_private_items, clippy::perf)]
@@ -43,7 +43,7 @@ use results::aggregator::Ranker;
 ///
 /// ```rust
 /// use std::net::TcpListener;
-/// use websurfx::{config::parser::Config, run, cache::cacher::create_cache};
+/// use anvesh::{config::parser::Config, run, cache::cacher::create_cache};
 ///
 /// #[tokio::main]
 /// async fn main(){

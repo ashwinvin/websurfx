@@ -60,7 +60,7 @@ $ npm i -g stylelint stylelint-config-standard postcss-lit
 > **Note**
 > In the above command the dollar sign(**$**) refers to running the command in privileged mode by using utilities `sudo`, `doas`, `pkgexec`, or any other privileged access methods.
 
-- `Cargo-watch` installed on your system which will allow you to auto-build the project when any checks occur in the source code files in the codebase (`websurfx` directory). Before you install `cargo-watch` on your system, make sure you have `cargo` installed on your system. To install `cargo-watch` run the following command:
+- `Cargo-watch` installed on your system which will allow you to auto-build the project when any checks occur in the source code files in the codebase (`anvesh` directory). Before you install `cargo-watch` on your system, make sure you have `cargo` installed on your system. To install `cargo-watch` run the following command:
 
 ```shell
 cargo install cargo-watch
@@ -89,8 +89,8 @@ cargo install cargo-watch
 Before you set `pre-commit` checks, you will first need to clone **your fork of the project** and navigate into the cloned repository by running the following command:
 
 ```shell
-git clone https://github.com/<your_github_username>/websurfx.git
-cd websurfx
+git clone https://github.com/<your_github_username>/anvesh.git
+cd anvesh
 ```
 
 Once you have finished running the above commands then run the following command to set the `pre-commit` checks:
@@ -159,7 +159,7 @@ This section covers how to use and set up the Gitpod development environment for
 To launch gitpod and start working on the project from your fork of the Websurfx, Just navigate to the following link:
 
 ```text
-https://gitpod.io/#https://github.com/<your_github_username>/websurfx
+https://gitpod.io/#https://github.com/<your_github_username>/anvesh
 ```
 
 > For a full guide on how to use it and how to use it in different ways. See [**Learn Gitpod**](https://piped.kavin.rocks/playlist?list=PL3TSF5whlprXVp-7Br2oKwQgU4bji1S7H)
@@ -201,7 +201,7 @@ The list of all the pre-installed plugins are listed below:
 - [Catppuccin for VSCode](https://open-vsx.org/extension/Catppuccin/catppuccin-vsc): Provides the catpuccin theme for vscode.
 - [Material Icon Theme](https://open-vsx.org/extension/PKief/material-icon-theme): Provides material design icons for files dependening on the file extension.
 
-> If you have more ideas and ways to improve Gitpod for development purposes then feel free to do so by contributing a PR to this project [**here**](https://github.com/neon-mmd/websurfx/pulls).
+> If you have more ideas and ways to improve Gitpod for development purposes then feel free to do so by contributing a PR to this project [**here**](https://github.com/neon-mmd/anvesh/pulls).
 
 ### NixOS Dev Shell using Nix Flake
 
@@ -224,8 +224,8 @@ Before you start working on the project. You will need the following packages in
 Before you setup `pre-commit` checks, you will first need to clone **your fork of the project** and navigate into the cloned repository by running the following command:
 
 ```shell
-git clone https://github.com/<your_github_username>/websurfx.git
-cd websurfx
+git clone https://github.com/<your_github_username>/anvesh.git
+cd anvesh
 ```
 
 Then run the following command to setup the `NixOS dev-shell`:
@@ -246,7 +246,7 @@ By running the above-mentioned command, it will automatically set up all the pre
 
 After you have done setting up pre-commit checks, then you may need to fulfill a few more requirements to finish setting up the development environment with `NixOS dev-shell`. These include:
 
-- `Cargo-watch` installed on your system which will allow you to auto-build the project when any checks occur in the source code files in the codebase (`websurfx` directory). Before you install `cargo-watch` on your system, make sure you have `cargo` installed on your system. To install `cargo-watch` run the following command:
+- `Cargo-watch` installed on your system which will allow you to auto-build the project when any checks occur in the source code files in the codebase (`anvesh` directory). Before you install `cargo-watch` on your system, make sure you have `cargo` installed on your system. To install `cargo-watch` run the following command:
 
 ```shell
 cargo install cargo-watch
@@ -335,8 +335,8 @@ $ npm i -g stylelint
 Before you setup `pre-commit` checks, you will first need to clone **your fork of the project** and navigate into the cloned repository by running the following command:
 
 ```shell
-git clone https://github.com/<your_github_username>/websurfx.git
-cd websurfx
+git clone https://github.com/<your_github_username>/anvesh.git
+cd anvesh
 ```
 
 Once you have finished running the above commands then run the following command to setup the `pre-commit` checks:
@@ -384,7 +384,7 @@ Once you have finished running the above command, Websurfx should now be served 
 
 ### Environment Variables
 
-All environment variables are optional. Currently, there are not many environment variables used, as most of the user preferences are stored under the `websurfx` folder (located under the codebase (`websurfx` directory)) in the `config.lua` file.
+All environment variables are optional. Currently, there are not many environment variables used, as most of the user preferences are stored under the `anvesh` folder (located under the codebase (`anvesh` directory)) in the `config.lua` file.
 
 The list of all the available environment variables are listed below:
 
@@ -532,7 +532,7 @@ Styleguides to follow:
 ├── public                       # Project front-end source code
 ├── src                          # Project back-end source code
 ├── tests                        # Project integration tests for the back-end source code.
-└── websurfx                     # Project folder containing config files for the app.
+└── anvesh                     # Project folder containing config files for the app.
 ```
 
 **Frontend Source:** `./public/`
@@ -573,7 +573,7 @@ Styleguides to follow:
 ./src/
 ├── lib.rs                        # A library file for the rust project.
 ├── bin                           # A folder containing the source code that would produce the binary file when compiled.
-│   └── websurfx.rs               # A file that would be compiled into a binary file.
+│   └── anvesh.rs               # A file that would be compiled into a binary file.
 ├── cache                         # A folder that contains code to handle the caching functionality of the search engine.
 │   ├── cacher.rs                 # Handles the different caching features.
 │   ├── error.rs                  # Provides custom error messages for different types of caches and their related errors.

@@ -1,4 +1,4 @@
-//! A module that handles the footer for all the pages in the `websurfx` frontend.
+//! A module that handles the footer for all the pages in the `anvesh` frontend.
 
 use maud::{html, Markup, PreEscaped};
 
@@ -17,8 +17,8 @@ pub fn footer() -> Markup {
            }
            div{
               ul{
-                  li{a href="https://github.com/neon-mmd/websurfx"{"Source Code"}}
-                  li{a href="https://github.com/neon-mmd/websurfx/issues"{"Issues/Bugs"}}
+                  li{a href="https://github.com/neon-mmd/anvesh"{"Source Code"}}
+                  li{a href="https://github.com/neon-mmd/anvesh/issues"{"Issues/Bugs"}}
               }
            }
         }

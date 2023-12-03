@@ -1,4 +1,4 @@
-//! A module that handles the header for all the pages in the `websurfx` frontend.
+//! A module that handles the header for all the pages in the `anvesh` frontend.
 
 use crate::templates::partials::navbar::navbar;
 use maud::{html, Markup, PreEscaped, DOCTYPE};

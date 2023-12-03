@@ -61,10 +61,10 @@ jobs:
           sed -i "s/ARG CACHE=[a-z]*/ARG CACHE=${{ matrix.cache }}/g" Dockerfile
       # Publish image
       - name: Publish image
-        run: docker buildx build --builder=buildx-multi-arch --platform=linux/amd64,linux/arm64 --build-arg CACHE=${{ matrix.cache }} --push -t neonmmd/websurfx:$VERSION-${{ matrix.cache }} -t neon-mmd/websurfx:${{matrix.cache}} -f Dockerfile .
+        run: docker buildx build --builder=buildx-multi-arch --platform=linux/amd64,linux/arm64 --build-arg CACHE=${{ matrix.cache }} --push -t neonmmd/anvesh:$VERSION-${{ matrix.cache }} -t neon-mmd/anvesh:${{matrix.cache}} -f Dockerfile .
       - name: Publish latest
         if: ${{ matrix.cache }} == 'hybrid'
-        run: docker buildx build --builder=buildx-multi-arch --platform=linux/amd64,linux/arm64 --build-arg CACHE=${{ matrix.cache }} --push -t neon-mmd/websurfx:latest -f Dockerfile .
+        run: docker buildx build --builder=buildx-multi-arch --platform=linux/amd64,linux/arm64 --build-arg CACHE=${{ matrix.cache }} --push -t neon-mmd/anvesh:latest -f Dockerfile .
       # Upload it to release
       - name: Test if release already exists
         id: release-exists

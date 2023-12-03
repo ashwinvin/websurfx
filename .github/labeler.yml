@@ -4,7 +4,7 @@
 - Cargo.lock
 - Dockerfile
 - docker-compose.yml
-- websurfx/*
+- anvesh/*
 
 '🤖 aspect: dx':
 - '**/*.json'

@@ -45,8 +45,8 @@
           RUST_SRC_PATH = rustPlatform.rustLibSrc;
         };
 
-      # Build via "nix build .#websurfx", which is basically just
+      # Build via "nix build .#anvesh", which is basically just
       # calls the build function
-      packages.websurfx = packages.default;
+      packages.anvesh = packages.default;
     });
 }

@@ -1,4 +1,4 @@
-//! A module that handles the view for the about page in the `websurfx` frontend.
+//! A module that handles the view for the about page in the `anvesh` frontend.
 
 use maud::{html, Markup};
 
@@ -36,12 +36,12 @@ pub fn about(colorscheme: &str, theme: &str) -> Markup {
 
              ul{strong{"Privacy focused"}" - Websurfx does not track, store or sell your search data. Your privacy is our priority."}
 
-             ul{strong{"Free and Open source"}" - The entire project's code is open source and available for free on "{a href="https://github.com/neon-mmd/websurfx"{"GitHub"}}" under an GNU Affero General Public License."}
+             ul{strong{"Free and Open source"}" - The entire project's code is open source and available for free on "{a href="https://github.com/neon-mmd/anvesh"{"GitHub"}}" under an GNU Affero General Public License."}
 
              ul{strong{"Highly customizable"}" - Websurfx comes with 9 built-in color themes and supports creating custom themes effortlessly."}
          }
 
-         h3{"Devoloped by: "{a href="https://github.com/neon-mmd/websurfx"{"Websurfx team"}}}
+         h3{"Devoloped by: "{a href="https://github.com/neon-mmd/anvesh"{"Websurfx team"}}}
         }
         (footer())
     )

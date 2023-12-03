@@ -34,7 +34,7 @@ request_client = {
 -- 3 - High
 -- 4 - Aggressive
 -- }}
-safe_search = 2
+safe_search = 0
 
 -- ### Website ###
 -- The different colorschemes provided are:
@@ -56,7 +56,7 @@ colorscheme = "catppuccin-mocha" -- the colorscheme name which should be used fo
 theme = "simple" -- the theme name which should be used for the website
 
 -- ### Caching ###
-redis_url = "redis://127.0.0.1:8082" -- redis connection url address on which the client should connect on.
+redis_url = "redis://127.0.0.1:6379" -- redis connection url address on which the client should connect on.
 
 -- ### Search Engines ###
 upstream_search_engines = {

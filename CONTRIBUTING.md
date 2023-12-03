@@ -6,7 +6,7 @@ Found a typo, or something that isn't as clear as it could be? Maybe I've missed
 
 ## Readme
 
-Did you find a typo, or the Readme is not as clear as it should be? Consider Submitting a Pull request to the [Readme](https://github.com/neon-mmd/websurfx/blob/master/README.md) to add to or improve the Readme. This will help future users to better understand the project more clearly.
+Did you find a typo, or the Readme is not as clear as it should be? Consider Submitting a Pull request to the [Readme](https://github.com/neon-mmd/anvesh/blob/master/README.md) to add to or improve the Readme. This will help future users to better understand the project more clearly.
 
 ## Help Improve GitHub Actions
 
@@ -28,7 +28,7 @@ You should know at least one of the things below to start contributing:
 
 ## Report a Bug/Issue
 
-If you've found a bug, then please consider raising it as an issue [here](https://github.com/neon-mmd/websurfx/issues). This will help me know if there's something that needs fixing. Try and include as much detail as possible, such as your environment, steps to reproduce, any console output and maybe an example screenshot or recording if necessary.
+If you've found a bug, then please consider raising it as an issue [here](https://github.com/neon-mmd/anvesh/issues). This will help me know if there's something that needs fixing. Try and include as much detail as possible, such as your environment, steps to reproduce, any console output and maybe an example screenshot or recording if necessary.
 
 ## Spread the word
 
@@ -51,4 +51,4 @@ We have a [Discord](https://discord.gg/SWnda7Mw5u) channel, feel free to join an
 The _rolling branch_ is where we intend all contributions should go.
 
 
-We appreciate any contributions whether of any size or topic and suggestions to help improve the Websurfx project. Please keep in mind the above requirements and guidelines before submitting a pull request and also if you have any doubts/concerns/questions about the project, its source code or anything related to the project then feel free to ask by opening an [issue](https://github.com/neon-mmd/websurfx/issues) or by asking us on our [Discord](https://discord.gg/SWnda7Mw5u) channel.
+We appreciate any contributions whether of any size or topic and suggestions to help improve the Websurfx project. Please keep in mind the above requirements and guidelines before submitting a pull request and also if you have any doubts/concerns/questions about the project, its source code or anything related to the project then feel free to ask by opening an [issue](https://github.com/neon-mmd/anvesh/issues) or by asking us on our [Discord](https://discord.gg/SWnda7Mw5u) channel.
