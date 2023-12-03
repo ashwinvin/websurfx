@@ -2,7 +2,7 @@
 
 > To contribute your server instance, check out the contributing guide [here](https://github.com/neon-mmd/anvesh/blob/HEAD/CONTRIBUTING.md).
 
-This page provides a list of `Websurfx` instances provided by us and our community. 
+This page provides a list of `Anvesh` instances provided by us and our community. 
 
 |URL|Network|Version|Location|Behind Cloudflare?|Maintained By|TLS|IPv6|Comment|
 |-|-|-|-|-|-|-|-|-|

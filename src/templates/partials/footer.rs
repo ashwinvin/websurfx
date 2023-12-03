@@ -12,7 +12,7 @@ pub fn footer() -> Markup {
     html!(
         footer{
            div{
-              span{"Powered By "b{"Websurfx"}}span{"-"}span{"a lightning-fast, privacy respecting, secure meta
+              span{"Powered By "b{"Anvesh"}}span{"-"}span{"a lightning-fast, privacy respecting, secure meta
                   search engine"}
            }
            div{

@@ -1,4 +1,4 @@
-<h1 align="center"><img src="../images/anvesh_docs_image.png" alt="Websurfx Docs" align="center"></h1>
+<h1 align="center"><img src="../images/anvesh_docs_image.png" alt="Anvesh Docs" align="center"></h1>
 
 # General
 

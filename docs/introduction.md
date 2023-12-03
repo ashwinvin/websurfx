@@ -8,6 +8,6 @@ Most meta search engines tend to be slow, lack a high level of customization, an
 
 # Solution 
 
-Websurfx is a project that seeks to provide privacy, security, speed, and all the features that the user wants.
+Anvesh is a project that seeks to provide privacy, security, speed, and all the features that the user wants.
 
 [⬅️  Go back to Home](./README.md)

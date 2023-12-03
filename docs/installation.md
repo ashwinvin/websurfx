@@ -4,7 +4,7 @@
 
 ### Rolling/Edge/Unstable
 
-You can install `Websurfx` through the [Aur](https://aur.archlinux.org/packages/anvesh-git), By running the following command (using [paru](https://github.com/Morganamilo/paru)):
+You can install `Anvesh` through the [Aur](https://aur.archlinux.org/packages/anvesh-git), By running the following command (using [paru](https://github.com/Morganamilo/paru)):
 
 ```shell
 paru -S anvesh-edge-git
@@ -16,7 +16,7 @@ After installing it you can run the anvesh server by running the following comma
 anvesh
 ```
 
-Once you have started the server, open your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Websurfx.
+Once you have started the server, open your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Anvesh.
 
 If you want to change the port or the IP or any other configuration setting check out the [configuration docs](./configuration.md).
 
@@ -28,7 +28,7 @@ For the stable version, follow the same steps as above (as mentioned for the `un
 
 A `flake.nix` has been provided to allow installing `anvesh` easily. It utilizes [nearsk](https://github.com/nix-community/naersk) to automatically generate a derivation based on `Cargo.toml` and `Cargo.lock`.
 
-The Websurfx project provides 2 versions/flavours for the flake `stable` and `rolling/unstable/edge`. The steps for each are covered below in different sections.
+The Anvesh project provides 2 versions/flavours for the flake `stable` and `rolling/unstable/edge`. The steps for each are covered below in different sections.
 
 ### Rolling/Edge/Unstable
 
@@ -47,7 +47,7 @@ nix run .#anvesh
 > **Note**
 > In the above command the dollar sign(**$**) refers to running the command in Privileged mode by using utilities `sudo`, `doas`, `pkgexec`, or any other privileged access methods.
 
-Once you have run the above set of commands, open your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Websurfx.
+Once you have run the above set of commands, open your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Anvesh.
 
 If you want to change the port or the IP or any other configuration setting check out the [configuration docs](./configuration.md).
 
@@ -102,7 +102,7 @@ Before you can start building `anvesh`, you will need to have `Cargo` installed 
 
 ## Stable
 
-To get started with Websurfx, clone the repository, edit the config file which is located in the `anvesh` directory, and install redis server by following the instructions located [here](https://redis.io/docs/getting-started/) and then build and run the anvesh server by running the following commands:
+To get started with Anvesh, clone the repository, edit the config file which is located in the `anvesh` directory, and install redis server by following the instructions located [here](https://redis.io/docs/getting-started/) and then build and run the anvesh server by running the following commands:
 
 ```shell
 git clone https://github.com/neon-mmd/anvesh.git
@@ -113,7 +113,7 @@ redis-server --port 8082 &
 ./target/release/anvesh
 ```
 
-Once you have started the server, open your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Websurfx.
+Once you have started the server, open your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Anvesh.
 
 If you want to change the port or the IP or any other configuration setting check out the [configuration docs](./configuration.md).
 
@@ -180,7 +180,7 @@ Once you have finished building the `search engine`. then run the following comm
 ./target/release/anvesh
 ```
 
-Once you have started the server, launch your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Websurfx.
+Once you have started the server, launch your preferred web browser and navigate to http://127.0.0.1:8080/ to start using Anvesh.
 
 If you want to change the port or the IP or any other configuration setting check out the [configuration docs](./configuration.md).
 
@@ -190,7 +190,7 @@ Before you start, you will need [Docker](https://docs.docker.com/get-docker/) in
 
 ## Prebuild
 
-The Websurfx project provides several prebuilt images based on the different features provided by the search engine. To get started using the prebuild image, you will first need to create a `docker-compose.yml` file with the following content:
+The Anvesh project provides several prebuilt images based on the different features provided by the search engine. To get started using the prebuild image, you will first need to create a `docker-compose.yml` file with the following content:
 
 ```yaml
 ---

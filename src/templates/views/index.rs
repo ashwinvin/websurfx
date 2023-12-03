@@ -18,7 +18,7 @@ pub fn index(colorscheme: &str, theme: &str) -> Markup {
     html!(
         (header(colorscheme, theme))
         main class="search-container"{
-            img src="../images/anvesh_logo.png" alt="Websurfx meta-search engine logo";
+            img src="../images/anvesh_logo.png" alt="Anvesh meta-search engine logo";
             (bar(&String::default()))
             (PreEscaped("</div>"))
         }

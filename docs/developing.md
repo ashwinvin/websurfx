@@ -1,6 +1,6 @@
 # Developing
 
-This page of the docs outlines how to get **Websurfx** up and running in a development environment, and outlines the common workflow, different ways to work on the project, a high-level overview of how the project works, project structure, and the best practices that should be followed when working on the project.
+This page of the docs outlines how to get **Anvesh** up and running in a development environment, and outlines the common workflow, different ways to work on the project, a high-level overview of how the project works, project structure, and the best practices that should be followed when working on the project.
 
 <details>
   <summary><b>Table of Contents</b></summary>
@@ -141,7 +141,7 @@ cargo watch -q -x "run --no-default-features --features redis-cache" -w .
 > redis-server --port 8082 &
 > ```
 
-Once you have finished running the above command, Websurfx should now be served on the address http://127.0.0.1:8080. Hot reload is enabled, so making changes to any of the files will trigger the project to be rebuilt.
+Once you have finished running the above command, Anvesh should now be served on the address http://127.0.0.1:8080. Hot reload is enabled, so making changes to any of the files will trigger the project to be rebuilt.
 
 > For more info on all the project commands. See: [**Project Commands**](#project-commands-)
 
@@ -156,7 +156,7 @@ This section covers how to use and set up the Gitpod development environment for
 
 > For a full guide on how to fork the project. See: [**Forking**](#)
 
-To launch gitpod and start working on the project from your fork of the Websurfx, Just navigate to the following link:
+To launch gitpod and start working on the project from your fork of the Anvesh, Just navigate to the following link:
 
 ```text
 https://gitpod.io/#https://github.com/<your_github_username>/anvesh
@@ -292,7 +292,7 @@ cargo watch -q -x "run --no-default-features --features redis-cache" -w .
 > redis-server --port 8082 &
 > ```
 
-Once you have finished running the above command, Websurfx should now be served on the address http://127.0.0.1:8080. Hot reload is enabled, so making changes to any of the files will trigger the project to be rebuilt.
+Once you have finished running the above command, Anvesh should now be served on the address http://127.0.0.1:8080. Hot reload is enabled, so making changes to any of the files will trigger the project to be rebuilt.
 
 ### Local Development with Docker Compose
 
@@ -358,7 +358,7 @@ $ docker compose -f dev.docker-compose.yml up
 > **Note**
 > In the above command the dollar sign(**$**) refers to running the command in privileged mode by using utilities `sudo`, `doas`, `pkgexec`, or any other privileged access methods.
 
-Once you have finished running the above command, Websurfx should now be served on the address http://127.0.0.1:8080. Hot reload is enabled, so making changes to any of the files will trigger the project to be rebuilt.
+Once you have finished running the above command, Anvesh should now be served on the address http://127.0.0.1:8080. Hot reload is enabled, so making changes to any of the files will trigger the project to be rebuilt.
 
 ### Project Commands
 
@@ -466,7 +466,7 @@ When you submit your pull request, include the required info, by filling out the
 
 ## Resources for Beginners
 
-New to Web Development? Or New to GitHub? Glad to see you're here!! :slightly_smiling_face: Websurfx is a pretty simple app, so it should make a good candidate for your first PR. The following articles (which have been divided into parts for convenience) should point you in the right direction for getting up to speed with the technologies used in this project:
+New to Web Development? Or New to GitHub? Glad to see you're here!! :slightly_smiling_face: Anvesh is a pretty simple app, so it should make a good candidate for your first PR. The following articles (which have been divided into parts for convenience) should point you in the right direction for getting up to speed with the technologies used in this project:
 
 **Development**
 

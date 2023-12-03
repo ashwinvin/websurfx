@@ -19,7 +19,7 @@ pub fn header(colorscheme: &str, theme: &str) -> Markup {
         html lang="en"
 
         head{
-            title{"Websurfx"}
+            title{"Anvesh"}
             meta charset="UTF-8";
             meta name="viewport" content="width=device-width, initial-scale=1";
             link href=(format!("static/colorschemes/{colorscheme}.css")) rel="stylesheet" type="text/css";
@@ -28,7 +28,7 @@ pub fn header(colorscheme: &str, theme: &str) -> Markup {
 
         (PreEscaped("<body onload=\"getClientSettings()\">"))
             header{
-                h1{a href="/"{"Websurfx"}}
+                h1{a href="/"{"Anvesh"}}
                 (navbar())
             }
     )

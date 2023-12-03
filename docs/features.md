@@ -16,7 +16,7 @@ This feature can drastically reduce binary size but with the cost that subsequen
 
 ### Redis Cache
 
-This feature allows the search engine to cache the results on the redis server. This feature can be useful for having a dedicated cache server for multiple devices hosted with the `Websurfx` server which can use the one dedicated cache server for hosting their cache on it. But a disadvantage of this solution is that if the `Redis`server is located far away (for example provided by a vps as service) and if it is unavailable or down for some reason then the `Websurfx` server would not be able to function properly or will crash on startup.
+This feature allows the search engine to cache the results on the redis server. This feature can be useful for having a dedicated cache server for multiple devices hosted with the `Anvesh` server which can use the one dedicated cache server for hosting their cache on it. But a disadvantage of this solution is that if the `Redis`server is located far away (for example provided by a vps as service) and if it is unavailable or down for some reason then the `Anvesh` server would not be able to function properly or will crash on startup.
 
 ### In Memory Cache 
 
@@ -24,7 +24,7 @@ This feature is the default feature provided by the project. This feature allows
 
 ### Hybrid Cache
 
-This feature provides the advantages of both `In Memory` caching and `Redis` caching and it is an ideal solution if you need a very resilient and reliable solution for the `Websurfx` which can provide both speed and reliability. Like for example if the `Redis` server becomes unavailable then the search engine switches to `In Memory` caching until the server becomes available again. This solution can be useful for hosting a `Websurfx` instance which will be used by hundreds or thousands of users all over the world.
+This feature provides the advantages of both `In Memory` caching and `Redis` caching and it is an ideal solution if you need a very resilient and reliable solution for the `Anvesh` which can provide both speed and reliability. Like for example if the `Redis` server becomes unavailable then the search engine switches to `In Memory` caching until the server becomes available again. This solution can be useful for hosting a `Anvesh` instance which will be used by hundreds or thousands of users all over the world.
 
 ## Tabular Summary 
 

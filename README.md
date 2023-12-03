@@ -77,7 +77,7 @@
   - [📊 System Requirements](#system-requirements-)
   - [🗨️ FAQ (Frequently Asked Questions)](#faq-frequently-asked-questions-%EF%B8%8F)
   - [📣 More Contributors Wanted](#more-contributors-wanted-)
-  - [💖 Supporting Websurfx](#supporting-anvesh-)
+  - [💖 Supporting Anvesh](#supporting-anvesh-)
   - [📘 Documentation](#documentation-)
   - [🛣️ Roadmap](#roadmap-%EF%B8%8F)
   - [🙋 Contributing](#contributing-)
@@ -111,7 +111,7 @@
 
 # Features 🚀
 
-- 🎨 Make Websurfx uniquely yours with the twelve color schemes provided by default. It also supports the creation of custom themes and color schemes in a quick and easy way, so unleash your creativity!
+- 🎨 Make Anvesh uniquely yours with the twelve color schemes provided by default. It also supports the creation of custom themes and color schemes in a quick and easy way, so unleash your creativity!
 - 🚀 Easy to setup with Docker or on bare metal with various installation and deployment options.
 - ⛔ Search filtering to filter search results based on four different levels.
 - 💾 Different caching levels focusing on reliability, speed and resiliancy.
@@ -128,7 +128,7 @@
 
 Before you can start building `anvesh`, you will need to have `Cargo` installed on your system. You can find the installation instructions [here](https://doc.rust-lang.org/cargo/getting-started/installation.html).
 
-To get started with Websurfx, clone the repository, edit the config file, which is located in the `anvesh/` directory, and install the Redis server by following the instructions located [here](https://redis.io/docs/getting-started/) and then run the anvesh server and redis server using the following commands:
+To get started with Anvesh, clone the repository, edit the config file, which is located in the `anvesh/` directory, and install the Redis server by following the instructions located [here](https://redis.io/docs/getting-started/) and then run the anvesh server and redis server using the following commands:
 
 ```shell
 git clone https://github.com/neon-mmd/anvesh.git
@@ -139,7 +139,7 @@ redis-server --port 8082 &
 ./target/release/anvesh
 ```
 
-Once you have started the server, open your preferred web browser and navigate to <http://127.0.0.1:8080> to start using Websurfx.
+Once you have started the server, open your preferred web browser and navigate to <http://127.0.0.1:8080> to start using Anvesh.
 
 > **Note**
 >
@@ -152,7 +152,7 @@ Once you have started the server, open your preferred web browser and navigate t
 
 > For full configuration instructions, see: [**Configuration**](docs/configuration.md)
 
-Websurfx is configured through the config.lua file, located at `anvesh/config.lua`.
+Anvesh is configured through the config.lua file, located at `anvesh/config.lua`.
 
 **[⬆️ Back to Top](#--)**
 
@@ -160,7 +160,7 @@ Websurfx is configured through the config.lua file, located at `anvesh/config.lu
 
 > For full theming and customization instructions, see: [**Theming**](docs/theming.md)
 
-Websurfx comes loaded with several themes and color schemes, which you can apply and edit through the config file. It also supports custom themes and color schemes using CSS, allowing you to make it truly yours.
+Anvesh comes loaded with several themes and color schemes, which you can apply and edit through the config file. It also supports custom themes and color schemes using CSS, allowing you to make it truly yours.
 
 **[⬆️ Back to Top](#--)**
 
@@ -179,17 +179,17 @@ At present, we only support x86_64 architecture systems, but we would love to ha
 
 # FAQ (Frequently Asked Questions) 🗨️
 
-## Why Websurfx?
+## Why Anvesh?
 
-The primary purpose of the Websurfx project is to create a fast, secure, and privacy-focused meta-search engine. There are numerous meta-search engines available, but not all guarantee the security of their search engines, which is critical for maintaining privacy. Memory flaws, for example, can expose private or sensitive information, which is understandably bad. There is also the added problem of spam, ads, and inorganic results, which most engines don't have a full-proof answer to. Until now. With Websurfx, I finally put a full stop to this problem. Websurfx is based on Rust, which ensures memory safety and removes such issues. Many meta-search engines also lack important features like advanced picture search, required by graphic designers, content providers, and others. Websurfx improves the user experience by providing these and other features, such as proper NSFW blocking and micro-apps or quick results (providing a calculator, currency exchanges, etc. in the search results).
+The primary purpose of the Anvesh project is to create a fast, secure, and privacy-focused meta-search engine. There are numerous meta-search engines available, but not all guarantee the security of their search engines, which is critical for maintaining privacy. Memory flaws, for example, can expose private or sensitive information, which is understandably bad. There is also the added problem of spam, ads, and inorganic results, which most engines don't have a full-proof answer to. Until now. With Anvesh, I finally put a full stop to this problem. Anvesh is based on Rust, which ensures memory safety and removes such issues. Many meta-search engines also lack important features like advanced picture search, required by graphic designers, content providers, and others. Anvesh improves the user experience by providing these and other features, such as proper NSFW blocking and micro-apps or quick results (providing a calculator, currency exchanges, etc. in the search results).
 
 ## Why AGPLv3?
 
-Websurfx is distributed under the **AGPLv3** license to keep the source code open and transparent. This helps keep malware, telemetry, and other dangers out of the project. **AGPLv3** is a strong copyleft license that ensures the software's source code, including any modifications or improvements made to the code, remains open and available to everyone.
+Anvesh is distributed under the **AGPLv3** license to keep the source code open and transparent. This helps keep malware, telemetry, and other dangers out of the project. **AGPLv3** is a strong copyleft license that ensures the software's source code, including any modifications or improvements made to the code, remains open and available to everyone.
 
 ## Why Rust?
 
-Websurfx is based on Rust due to its memory safety features, which prevent vulnerabilities and make the codebase more secure. Rust is also faster than C++, contributing to Websurfx's speed and responsiveness. Finally, the Rust ownership and borrowing system enables secure concurrency and thread safety in the program.
+Anvesh is based on Rust due to its memory safety features, which prevent vulnerabilities and make the codebase more secure. Rust is also faster than C++, contributing to Anvesh's speed and responsiveness. Finally, the Rust ownership and borrowing system enables secure concurrency and thread safety in the program.
 
 **[⬆️ Back to Top](#--)**
 
@@ -199,11 +199,11 @@ We are looking for more willing contributors to help grow this project. For more
 
 **[⬆️ Back to Top](#--)**
 
-# Supporting Websurfx 💖
+# Supporting Anvesh 💖
 
 > For full details and other ways you can help out, see: [**Contributing**](CONTRIBUTING.md)
 
-If you use Websurfx and would like to contribute to its development, we're glad to have you on board! Contributions of any size or type are always welcome, and we will always acknowledge your efforts.
+If you use Anvesh and would like to contribute to its development, we're glad to have you on board! Contributions of any size or type are always welcome, and we will always acknowledge your efforts.
 
 Several areas that we need a bit of help with at the moment are:
 
@@ -212,7 +212,7 @@ Several areas that we need a bit of help with at the moment are:
 - **Logo**: Help create a logo for the project and website.
 - **Docker Support**: Help write a Docker Compose file for the project.
 - Submit a PR to add a new feature, fix a bug, update the docs, add a theme, widget, or anything else.
-- Star Websurfx on GitHub.
+- Star Anvesh on GitHub.
 
 **[⬆️ Back to Top](#--)**
 
@@ -245,7 +245,7 @@ If you are a developer, have a look at the [CONTRIBUTING.md](CONTRIBUTING.md) do
 
 # License 📜
 
-Websurfx is licensed under the [AGPLv3](LICENSE) license.
+Anvesh is licensed under the [AGPLv3](LICENSE) license.
 
 **[⬆️ Back to Top](#--)**
 

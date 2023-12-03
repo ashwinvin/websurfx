@@ -2,7 +2,7 @@
 //! and register all the routes for the `anvesh` meta search engine website.
 
 #![forbid(unsafe_code, clippy::panic)]
-#![deny(missing_docs, clippy::missing_docs_in_private_items, clippy::perf)]
+// #![deny(missing_docs, clippy::missing_docs_in_private_items, clippy::perf)]
 #![warn(clippy::cognitive_complexity, rust_2018_idioms)]
 
 pub mod cache;

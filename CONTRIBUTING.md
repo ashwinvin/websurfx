@@ -2,7 +2,7 @@
 
 ## Documentation/Wiki
 
-Found a typo, or something that isn't as clear as it could be? Maybe I've missed something off altogether, or you hit a roadblock that took you a while to figure out. Edit the [docs](./docs/) to add to or improve the documentation. This will help future users get Websurfx up and running more easily.
+Found a typo, or something that isn't as clear as it could be? Maybe I've missed something off altogether, or you hit a roadblock that took you a while to figure out. Edit the [docs](./docs/) to add to or improve the documentation. This will help future users get Anvesh up and running more easily.
 
 ## Readme
 
@@ -32,7 +32,7 @@ If you've found a bug, then please consider raising it as an issue [here](https:
 
 ## Spread the word
 
-Websurfx is still a relatively young project, and as such not many people know of it. It would be great to see more users, and so it would be awesome if you could consider sharing with your friends or on social platforms.
+Anvesh is still a relatively young project, and as such not many people know of it. It would be great to see more users, and so it would be awesome if you could consider sharing with your friends or on social platforms.
 
 ## Guidelines
 
@@ -51,4 +51,4 @@ We have a [Discord](https://discord.gg/SWnda7Mw5u) channel, feel free to join an
 The _rolling branch_ is where we intend all contributions should go.
 
 
-We appreciate any contributions whether of any size or topic and suggestions to help improve the Websurfx project. Please keep in mind the above requirements and guidelines before submitting a pull request and also if you have any doubts/concerns/questions about the project, its source code or anything related to the project then feel free to ask by opening an [issue](https://github.com/neon-mmd/anvesh/issues) or by asking us on our [Discord](https://discord.gg/SWnda7Mw5u) channel.
+We appreciate any contributions whether of any size or topic and suggestions to help improve the Anvesh project. Please keep in mind the above requirements and guidelines before submitting a pull request and also if you have any doubts/concerns/questions about the project, its source code or anything related to the project then feel free to ask by opening an [issue](https://github.com/neon-mmd/anvesh/issues) or by asking us on our [Discord](https://discord.gg/SWnda7Mw5u) channel.
