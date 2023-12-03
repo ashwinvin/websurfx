@@ -1,7 +1,7 @@
 //! This module provides the functionality to scrape and gathers all the results from the upstream
 //! search engines and then removes duplicate results.
 
-use crate::engine::RawResults;
+use crate::engine_handler::RawResults;
 use crate::handler::{file_path, FileType};
 use crate::models::{
     aggregation_models::{EngineErrorInfo, SearchResult, SearchResults},
@@ -9,15 +9,16 @@ use crate::models::{
 };
 use error_stack::Report;
 use regex::Regex;
-use reqwest::Client;
+
 
 use std::{
     collections::HashMap,
     io::{BufReader, Read},
 };
 use std::{fs::File, io::BufRead};
-use tokio::task::JoinHandle;
 
+
+/// A struct which handles the ranking the of search result
 pub struct Ranker;
 
 impl Ranker {
@@ -38,6 +39,7 @@ impl Ranker {
         responses: RawResults,
         safe_search: u8,
     ) -> Result<(Vec<SearchResult>, Vec<EngineErrorInfo>), Box<dyn std::error::Error>> {
+        //  TODO: abstract this logic into `SearchResults`
         let mut result_map: HashMap<String, SearchResult> = HashMap::new();
         let mut engine_errors_info: Vec<EngineErrorInfo> = Vec::new();
 
@@ -97,11 +99,14 @@ impl Ranker {
         Ok((result_map.into_values().collect(), engine_errors_info))
     }
 
+
+    /// This function processes the search results according to an algorithm
     pub fn process(
         &self,
         responses: RawResults,
         safe_search: u8,
     ) -> Result<SearchResults, Box<dyn std::error::Error>> {
+        // TODO: Implement an algorithm
         let (results, engine_errors_info) = self.preprocess(responses, safe_search)?;
 
         Ok(SearchResults::new(results, &engine_errors_info))
@@ -150,7 +155,7 @@ pub fn filter_with_lists(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::models::aggregation_models::ResultType;
+    
     use smallvec::smallvec;
     use std::collections::HashMap;
     use std::io::Write;

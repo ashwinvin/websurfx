@@ -3,11 +3,11 @@
 use crate::{
     cache::cacher::SharedCache,
     config::parser::Config,
-    engine::EngineHandler,
+    engine_handler::EngineHandler,
     handler::{file_path, FileType},
     models::{
         aggregation_models::SearchResults,
-        server_models::{Cookie, SearchParams},
+        server_models::{Cookie, SearchParams}, engine_models::QueryType,
     },
     results::aggregator::Ranker,
 };
@@ -168,7 +168,7 @@ async fn results(
                         false => {
                             // let engines = engines.iter().;
                             let results = engine_handler
-                                .search(Some(engines), query, page, safe_search)
+                                .search(Some(engines), query, QueryType::Text, None, page, safe_search)
                                 .await;
                             ranker.process(results, safe_search)?
                         }
@@ -180,7 +180,7 @@ async fn results(
                     }
                 }
                 None => {
-                    let results = engine_handler.search(None, query, page, safe_search).await;
+                    let results = engine_handler.search(None, query, QueryType::Text, None, page, safe_search).await;
                     ranker.process(results, safe_search)?
                 }
             };

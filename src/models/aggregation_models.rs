@@ -28,14 +28,18 @@ pub struct SearchResult {
 
 #[derive(Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
+/// Represents the type of search result along with associated data.
 pub enum ResultType {
+    /// A basic text result.
     TextResult,
+    /// An image search result
     ImageSearchResult {
         /// The url of the image
         image_url: String,
         /// The resolution and format of the image. Formatted as "resolution - format"
         format: String,
     },
+    /// A video search result
     VideoSearchResult {
         /// The length of the video.
         length: Option<String>,
@@ -44,12 +48,14 @@ pub enum ResultType {
         /// The time of upload.
         uploaded_time: Option<Date>,
     },
+    /// An file search result, can be a torrent file too.
     FileSearchResult {
         /// The metadata regarding the file. eg: author, size, etc
         metadata: HashMap<String, String>,
         /// The time of upload of the file.
         uploaded_at: Option<Date>,
     },
+    /// An autocompletion result.
     AutoCompletionResult {
         /// The suggested completion by the upstream search engine.
         suggestion: String,

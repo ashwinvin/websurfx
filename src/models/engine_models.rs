@@ -7,13 +7,16 @@ use enumflags2::bitflags;
 use error_stack::Result;
 use std::{collections::HashMap, fmt, sync::Arc};
 
+/// A custom error type used for handling engine associated errors.
 #[derive(Debug)]
 pub struct EngineError {
+    /// The type of error that has occured.
     pub error_type: EngineErrorType,
+    /// The name of the search engine that raised this errror.
     pub engine: String,
 }
 
-/// A custom error type used for handle engine associated errors.
+/// A custom error type used for indicating the type of exception.
 #[derive(Debug)]
 pub enum EngineErrorType {
     /// No matching engine found
@@ -60,28 +63,42 @@ impl std::error::Error for EngineError {}
 #[bitflags]
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, PartialEq)]
+/// Represents type of results the query requested.
 pub enum QueryType {
+    /// Text search results
     Text = 0b00001,
+    /// Video search results
     Video = 0b00010,
+    /// Image search results
     Image = 0b00100,
+    /// File search results. This also covers torrent files.
     File = 0b01000,
+    /// Autocompletion results.
     AutoCompletion = 0b10000,
 }
 
+/// The time relevancy that the results must be within.
 #[derive(Debug, Clone)]
-pub enum QueryRelavancy {
+pub enum TimeRelavancy {
+    /// 
     Anytime,
+    /// 
     LastDay,
+    /// 
     LastWeek,
+    /// 
     LastMonth,
+    /// 
     LastYear,
 }
 
 /// A trait to define common behavior for all search engines.
 #[async_trait::async_trait]
 pub trait SearchEngine: Sync + Send {
+    /// This function should return the name of the search engine
     fn get_name(&self) -> &'static str;
 
+    /// This function should return the types of search results it can provide.
     fn get_query_types(&self) -> QueryType;
 
     /// This function scrapes results from the upstream engine and puts all the scraped results like
@@ -92,20 +109,21 @@ pub trait SearchEngine: Sync + Send {
     /// # Arguments
     ///
     /// * `query` - Takes the user provided query to query to the upstream search engine with.
-    /// * `page` - Takes an u32 as an argument.
-    /// * `user_agent` - Takes a random user agent string as an argument.
+    //  * `query_type` - The type of results to search for. 
+    ///  * `page` - The page number.
+    ///  * `time_relevance` - The required time relevancy of the search.
     ///
     /// # Errors
     ///
-    /// Returns an `EngineErrorKind` if the user is not connected to the internet or if their is failure to
+    /// Returns an `EngineError` if the user is not connected to the internet or if their is failure to
     /// reach the above `upstream search engine` page or if the `upstream search engine` is unable to
     /// provide results for the requested search query and also returns error if the scraping selector
     /// or HeaderMap fails to initialize.
     async fn fetch_results(
         &self,
         query: &str,
-        // category: QueryType,
-        // query_relevance: Option<QueryRelavancy>,
+        query_type: QueryType,
+        time_relevance: Option<TimeRelavancy>,
         page: u32,
         client: Arc<HttpClient>,
         safe_search: u8,

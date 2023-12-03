@@ -51,14 +51,22 @@ pub struct RateLimiter {
     pub time_limit: u8,
 }
 
+/// Configuration option for http client.
 #[derive(Clone)]
 pub struct RequestClientConfig {
+    /// The connection url for proxy.
     pub proxy_url: Option<String>,
+    /// Whether the given proxy is a tor enabled proxy.
     pub is_tor_proxy: Option<bool>,
+    /// Whether to use http2 or not.
     pub use_http2: bool,
+    /// TODO: Remove this
     pub https_only: bool,
+    /// The maximum timeout for a request.
     pub timeout: u8,
+    /// The maximumm amount of time to retry a request.
     pub max_retries: u8,
+    /// The maximum number of redirects that is allowed.
     pub max_redirects: u8,
 }
 

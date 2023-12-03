@@ -1,6 +1,6 @@
 use std::net::TcpListener;
 
-use anvesh::{config::parser::Config, run, templates::views};
+use anvesh::{config::parser::Config, run, templates::views, models::client_models::HttpClient, engine_handler::EngineHandler, results::aggregator::Ranker};
 
 // Starts a new instance of the HTTP server, bound to a random available port
 async fn spawn_app() -> String {
@@ -9,7 +9,17 @@ async fn spawn_app() -> String {
     let port = listener.local_addr().unwrap().port();
     let config = Config::parse(false).unwrap();
     let cache = anvesh::cache::cacher::create_cache(&config).await;
-    let server = run(listener, config, cache).expect("Failed to bind address");
+    let http_client = HttpClient::new(&config).unwrap();
+    let engine_handler = {
+        let engine_names: Vec<String> = config
+            .upstream_search_engines
+            .iter()
+            .filter_map(|(k, v)| if *v { Some(k.to_string()) } else { None })
+            .collect();
+        EngineHandler::new(engine_names, http_client).unwrap()
+    };
+    let ranker = Ranker;
+    let server = run(listener, config, cache, engine_handler, ranker).expect("Failed to bind address");
 
     tokio::spawn(server);
     format!("http://127.0.0.1:{}/", port)

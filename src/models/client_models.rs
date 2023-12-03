@@ -1,12 +1,14 @@
 //! This module provides the public models for handling web requests made by engines to upstream search engines.
 
 use error_stack::{Result, ResultExt};
+use serde::de::DeserializeOwned;
 use std::{fmt::Display, time::Duration};
 
 use crate::config::parser::Config;
 use reqwest::{redirect::Policy, Client, ClientBuilder, Proxy, Response};
 
 #[derive(Debug)]
+/// Represents the type of errors that can occur when a request is sent.
 pub enum ClientError {
     /// Raised when a web request is failed.
     RequestError,
@@ -38,9 +40,11 @@ impl Display for ClientError {
 impl std::error::Error for ClientError {}
 
 #[derive(Clone)]
+/// This struct handles all the web request made by search engines.
 pub struct HttpClient(Client);
 
 impl HttpClient {
+    /// Initialises an instance of client using config.
     pub fn new(config: &Config) -> Result<Self, ClientError> {
         let config = config.request_client.clone();
 
@@ -71,7 +75,7 @@ impl HttpClient {
         ))
     }
 
-    // TODO: Should this be made public?
+    /// Fetch results from an url
     async fn fetch(
         &self,
         url: &str,
@@ -92,6 +96,7 @@ impl HttpClient {
             .change_context(ClientError::RequestError)
     }
 
+    /// Fetch Html body of an url
     pub async fn fetch_html(
         &self,
         url: &str,
@@ -105,12 +110,13 @@ impl HttpClient {
             .change_context(ClientError::RequestError)
     }
 
-    pub async fn fetch_json(
+    /// Fetch json from a url
+    pub async fn fetch_json<T: DeserializeOwned>(
         &self,
         url: &str,
         header_map: reqwest::header::HeaderMap,
         timeout: Option<u8>,
-    ) -> Result<String, ClientError> {
+    ) -> Result<T, ClientError> {
         self.fetch(url, header_map, timeout)
             .await?
             .json()

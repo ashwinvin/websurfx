@@ -12,7 +12,7 @@ use scraper::Html;
 use crate::models::aggregation_models::SearchResult;
 
 use crate::models::client_models::HttpClient;
-use crate::models::engine_models::{EngineError, EngineErrorType, QueryType, SearchEngine};
+use crate::models::engine_models::{EngineError, EngineErrorType, QueryType, SearchEngine, TimeRelavancy};
 
 use error_stack::{Result, ResultExt};
 
@@ -57,8 +57,8 @@ impl SearchEngine for DuckDuckGo {
     async fn fetch_results(
         &self,
         query: &str,
-        // category: QueryType,
-        // query_relevance: Option<QueryRelavancy>,
+        _query_type: QueryType,
+        _time_relevance: Option<TimeRelavancy>,
         page: u32,
         client: Arc<HttpClient>,
         _safe_search: u8,

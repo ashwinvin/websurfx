@@ -2,12 +2,12 @@
 //! and register all the routes for the `anvesh` meta search engine website.
 
 #![forbid(unsafe_code, clippy::panic)]
-// #![deny(missing_docs, clippy::missing_docs_in_private_items, clippy::perf)]
+#![deny(missing_docs, clippy::missing_docs_in_private_items, clippy::perf)]
 #![warn(clippy::cognitive_complexity, rust_2018_idioms)]
 
 pub mod cache;
 pub mod config;
-pub mod engine;
+pub mod engine_handler;
 pub mod engines;
 pub mod handler;
 pub mod models;
@@ -25,7 +25,7 @@ use actix_governor::{Governor, GovernorConfigBuilder};
 use actix_web::{dev::Server, http::header, middleware::Logger, web, App, HttpServer};
 use cache::cacher::{Cacher, SharedCache};
 use config::parser::Config;
-use engine::EngineHandler;
+use engine_handler::EngineHandler;
 use handler::{file_path, FileType};
 use results::aggregator::Ranker;
 
@@ -38,27 +38,12 @@ use results::aggregator::Ranker;
 /// # Returns
 ///
 /// Returns a `Result` containing a `Server` instance on success, or an `std::io::Error` on failure.
-///
-/// # Example
-///
-/// ```rust
-/// use std::net::TcpListener;
-/// use anvesh::{config::parser::Config, run, cache::cacher::create_cache};
-///
-/// #[tokio::main]
-/// async fn main(){
-///     let config = Config::parse(true).unwrap();
-///     let listener = TcpListener::bind("127.0.0.1:8080").expect("Failed to bind address");
-///     let cache = create_cache(&config).await;
-///     let server = run(listener,config,cache).expect("Failed to start server");
-/// }
-/// ```
 pub fn run(
     listener: TcpListener,
     config: Config,
     cache: impl Cacher + 'static,
     engine_handler: EngineHandler,
-    _ranker: Ranker,
+    ranker: Ranker,
 ) -> std::io::Result<Server> {
     let public_folder_path: &str = file_path(FileType::Theme)?;
 
@@ -66,7 +51,7 @@ pub fn run(
 
     let cache = web::Data::new(SharedCache::new(cache));
     let engine_handler = web::Data::new(engine_handler);
-    let ranker = web::Data::new(Ranker);
+    let ranker = web::Data::new(ranker);
 
     let server = HttpServer::new(move || {
         let cors: Cors = Cors::default()

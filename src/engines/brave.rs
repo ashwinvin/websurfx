@@ -10,7 +10,7 @@ use scraper::Html;
 use crate::models::{
     aggregation_models::SearchResult,
     client_models::HttpClient,
-    engine_models::{EngineErrorType, QueryType},
+    engine_models::{EngineErrorType, QueryType, TimeRelavancy},
 };
 use error_stack::{Result, ResultExt};
 
@@ -56,8 +56,8 @@ impl SearchEngine for Brave {
     async fn fetch_results(
         &self,
         query: &str,
-        // category: QueryType,
-        // query_relevance: Option<QueryRelavancy>,
+        _query_type: QueryType,
+        _time_relevance: Option<TimeRelavancy>,
         page: u32,
         client: Arc<HttpClient>,
         safe_search: u8,

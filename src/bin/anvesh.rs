@@ -6,7 +6,7 @@
 use mimalloc::MiMalloc;
 use std::net::TcpListener;
 use anvesh::{
-    cache::cacher::create_cache, config::parser::Config, engine::EngineHandler,
+    cache::cacher::create_cache, config::parser::Config, engine_handler::EngineHandler,
     models::client_models::HttpClient, results::aggregator::Ranker, run,
 };
 
